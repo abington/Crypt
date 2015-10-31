@@ -14,6 +14,10 @@ The above badges represent the current development branch.  As a rule, I don't p
  project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
  and 'Installation'.
  
+ The Travis tests cover multiple versions of PHP. The HexUtil classes in this library
+ are PHP version aware - not so the travis CI system and hence the coveralls coverage stats.  
+ >= 74% is good, do not be deceived.  Check it out for yourself.
+ 
 ## What?
 
 Provides a simple encryption capability
@@ -21,7 +25,7 @@ Provides a simple encryption capability
 ## Why?
 
 Encryption is not generally straight forward.  This library tries to ease the pain.
-At the present time, a single encryption method is provided, others will follow.
+At the present time, a single verified encryption method is provided, others will follow.
 
 As the majority of web encryption requires that you are able to store the value in
 cookies, database tables etc, by default the encrypted value is encoded using Base 64.
@@ -72,6 +76,10 @@ $crypt = new Crypt(new StringType('my seed value'), new Rijndael256());
 $crypt->setUseMacAddress(new BoolType(false));
 </pre>
  
+### Development only
+
+i.e. only on master branch at present
+
 As an example of how you can wrap other libraries into this, I've supplied the Blowfish
 method, which requires the Zend Crypt library.  
 
