@@ -1,0 +1,30 @@
+@startuml
+title Chippash Crypt Classes
+namespace Chippyash {
+
+    namespace Crypt {
+
+        namespace Exceptions {
+            class CryptException
+        }
+
+        namespace Method {
+            interface MethodInterface {
+                encrypt($data, $key):mixed|false
+                decrypt($data, $key):mixed|false
+            }
+            class RijnDael256
+        }
+
+        class Crypt {
+            __construct(StringType $seed, MethodInterface $method):fluent
+            setUseMacAddress(BoolType $flag):fluent
+            mcEncrypt($data, BoolType $base64Encode = null):mixed|false
+            mcDecrypt($enc, BoolType $base64Decode = null):mixed
+        }
+    }
+}
+Chippyash.Crypt.Method.MethodInterface <|-- Chippyash.Crypt.Method.RijnDael256
+Chippyash.Crypt.Exceptions.CryptException <.. Chippyash.Crypt.Method.RijnDael256
+Chippyash.Crypt.Method.MethodInterface <.. Chippyash.Crypt.Crypt
+@enduml

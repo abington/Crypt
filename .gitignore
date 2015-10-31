@@ -1,0 +1,9 @@
+### Composer template
+vendor/
+composer.lock
+
+### JetBrains template
+*.iml
+
+## Directory-based project format:
+.idea/

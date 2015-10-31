@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+    Symfony DI container definition example
+-->
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="seed">2274cfb2-6d4e-4859-aaf0-6ff59acfc5d8</parameter>
+        <parameter key="useMac">true</parameter>
+    </parameters>
+
+    <services>
+        <service id="strongtype.bool.factory"
+                 class="chippyash\Type\BoolType"
+                 factory-method="createBool"
+                 factory-class="chippyash\Type\TypeFactory" />
+        <service id="strongtype.string.factory"
+                 class="chippyash\Type\String\StringType"
+                 factory-method="createString"
+                 factory-class="chippyash\Type\TypeFactory" />
+
+        <service id="crypt.seed"
+                parent="strongtype.string.factory"
+                public="false">
+            <argument>%seed%</argument>
+        </service>
+        <service id="crypt.useMac"
+                parent="strongtype.bool.factory"
+                public="false">
+            <argument>%useMac%</argument>
+        </service>
+        <service id="crypt.method"
+                class="Chippyash\Crypt\Method\Rijndael256"
+                public="false"/>
+
+        <service id="crypt.service"
+                class="Chippyash\Crypt\Crypt">
+            <argument type="service" id="crypt.seed"/>
+            <argument type="service" id="crypt.method"/>
+            <call method="setUseMacAddress">
+                <argument type="service" id="crypt.useMac"/>
+            </call>
+        </service>
+
+    </services>
+</container>
