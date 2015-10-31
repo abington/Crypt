@@ -144,6 +144,9 @@ class Crypt
      */
     private function getMac()
     {
+        if (!`which ifconfig`) {
+            return false;
+        }
         $cmd = "ifconfig"; //linux only
         $output = array();
         $ret = exec($cmd, $output);

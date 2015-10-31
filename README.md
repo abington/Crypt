@@ -62,7 +62,7 @@ $decrypted = $crypt->decrypt($encrypted, new BoolType(false));
 </pre>
 
 By default, on \*nix based machines, the seed that you supply on construction is mixed
-with the mac address of the machine that the code is running on.  This ensures that only
+with the mac address of the machine that the code is running on, if it can be found.  This ensures that only
 that machine can encrypt and decrypt a given value.  If you do not want this, say for instance
 that you are running on load balanced machines and storing in a central database, you can
 switch it off:
