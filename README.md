@@ -72,6 +72,20 @@ $crypt = new Crypt(new StringType('my seed value'), new Rijndael256());
 $crypt->setUseMacAddress(new BoolType(false));
 </pre>
  
+As an example of how you can wrap other libraries into this, I've supplied the Blowfish
+method, which requires the Zend Crypt library.  
+
+<pre>
+use Chippyash\Crypt\Crypt\Method\Blowfish;
+
+$crypt = new Crypt(new StringType('my seed value'), new Blowfish());
+</pre>
+
+If you want to do very serious cryptography
+the Zend Crypt library is a good starting point.  If you just want sound and simple, use
+this library.  You will need to  use the now default `composer install` to bring in dev 
+dependencies to use the Zend stuff. If you like it then add `"zendframework/zend-crypt": "~2.5.0"`
+to your project composer 'requires' statement;
 
 ## Further documentation
 
@@ -124,6 +138,8 @@ Or to use the latest, possibly unstable version:
     "chippyash/crypt": "dev-master"
 </pre>
 
+To use the Zend cryptography lib under my lib add the `"zendframework/zend-crypt": "~2.5.0"`
+line to your composer require section.
 
 #### For development
 

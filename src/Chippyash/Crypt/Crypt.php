@@ -48,7 +48,7 @@ class Crypt
      */
     public function __construct(StringType $seed, MethodInterface $method)
     {
-        if (!function_exists('mcrypt_module_open')) {
+        if (!extension_loaded('mcrypt')) {
             throw new CryptException('mcrypt extension is not loaded. Please install.');
         }
         $this->seed = $seed();

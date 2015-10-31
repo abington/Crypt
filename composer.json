@@ -1,34 +1,35 @@
 {
-    "name": "chippyash/crypt",
-    "description": "Simple cryptography",
-    "homepage": "http://the-matrix.github.io/",
-    "keywords": [
-        "encryption",
-        "decryption"
-    ],
-    "authors": [
-        {
-            "name": "Ashley Kitson",
-            "email": "ashley@zf4.biz"
-        }
-    ],
-    "license": "GPL 3.0",
-
-    "require" : {
-        "php": ">=5.3",
-        "ext-mcrypt":"*",
-        "chippyash/strong-type": "~2.1.0"
-    },
-    
-    "require-dev" : {
-        "phpunit/phpunit": "~4.3",
-        "codeclimate/php-test-reporter": "dev-master",
-        "satooshi/php-coveralls" : "~0.6.1"
-
-    },
-    "autoload": {
-        "psr-0": {
-            "Chippyash\\Crypt\\": "src/"
-        }
+  "name": "chippyash/crypt",
+  "description": "Simple cryptography",
+  "homepage": "http://the-matrix.github.io/",
+  "keywords": [
+    "encryption",
+    "decryption"
+  ],
+  "authors": [
+    {
+      "name": "Ashley Kitson",
+      "email": "ashley@zf4.biz"
     }
+  ],
+  "license": "GPL 3.0",
+  "require": {
+    "php": ">=5.3",
+    "ext-mcrypt": "*",
+    "chippyash/strong-type": "~2.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.3",
+    "codeclimate/php-test-reporter": "dev-master",
+    "satooshi/php-coveralls": "~0.6.1",
+    "zendframework/zend-crypt": "~2.5.0"
+  },
+  "suggest": {
+    "zendframework/zend-crypt": "Use Zend Crypt BlockCipher component in your method classes"
+  },
+  "autoload": {
+    "psr-0": {
+      "Chippyash\\Crypt\\": "src/"
+    }
+  }
 }
