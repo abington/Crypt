@@ -1,7 +1,7 @@
 # Chippyash Crypt
 
 ## 
-      Chippyash\Crypt\Crypt
+      Chippyash\Test\Crypt\Crypt
     
 
 *  You can set the use of the mac address
@@ -11,6 +11,21 @@
 *  You can switch off base 64 encoding for encryption
 *  You can switch off base 64 encoding for decryption
 *  Decrypting an empty value will return the same value
+
+## 
+      Chippyash\Test\Crypt\Method\AbstractZend
+    
+
+*  You can encrypt using a zend abstract method
+*  You can decrypt using zend abstract method
+*  The abstract zend method proxies unknown methods to zend block cipher
+*  Calling a non existent method on the underlaying block cipher will throw an exception
+
+## 
+      Chippyash\Test\Crypt\Method\Blowfish
+    
+
+*  You can encrypt and decrypt using the blowfish method
 
 ## 
       Chippyash\Test\Crypt\Method\HexUtil\HexUtil53
