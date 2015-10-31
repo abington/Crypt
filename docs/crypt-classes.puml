@@ -14,6 +14,10 @@ namespace Chippyash {
                 decrypt($data, $key):mixed|false
             }
             class RijnDael256
+            class AbstractZend<<Zend\Crypt\BlockCipher>> {
+                __call($method, $params)
+            }
+            class Blowfish
         }
 
         class Crypt {
@@ -25,6 +29,8 @@ namespace Chippyash {
     }
 }
 Chippyash.Crypt.Method.MethodInterface <|-- Chippyash.Crypt.Method.RijnDael256
+Chippyash.Crypt.Method.MethodInterface <|-- Chippyash.Crypt.Method.AbstractZend
+Chippyash.Crypt.Method.AbstractZend <|-- Chippyash.Crypt.Method.Blowfish
 Chippyash.Crypt.Exceptions.CryptException <.. Chippyash.Crypt.Method.RijnDael256
 Chippyash.Crypt.Method.MethodInterface <.. Chippyash.Crypt.Crypt
 @enduml
