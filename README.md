@@ -14,9 +14,9 @@ The above badges represent the current development branch.  As a rule, I don't p
  project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
  and 'Installation'.
  
- The Travis tests cover multiple versions of PHP. The HexUtil classes in this library
- are PHP version aware - not so the travis CI system and hence the coveralls coverage stats.  
- >= 74% is good, do not be deceived.  Check it out for yourself.
+ The Travis tests cover multiple versions of PHP. However, they do not allow usage of system
+   commands, hence the getMac() method of Crypt.php doesn't work on the Travis servers.
+   Check it out for yourself.
  
 ## What?
 
