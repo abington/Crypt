@@ -9,7 +9,6 @@
 
 namespace Chippyash\Crypt\Method;
 
-use Chippyash\Crypt\Exceptions\CryptException;
 use Zend\Crypt\BlockCipher;
 use Zend\Crypt\Symmetric\SymmetricInterface;
 

@@ -10,8 +10,8 @@ namespace Chippyash\Crypt;
 
 use Chippyash\Crypt\Exceptions\CryptException;
 use Chippyash\Crypt\Method\MethodInterface;
-use chippyash\Type\BoolType;
-use chippyash\Type\String\StringType;
+use Chippyash\Type\BoolType;
+use Chippyash\Type\String\StringType;
 
 /**
  * Straightforward encrypt/decrypt methods

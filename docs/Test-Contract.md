@@ -28,26 +28,6 @@
 *  You can encrypt and decrypt using the blowfish method
 
 ## 
-      Chippyash\Test\Crypt\Method\HexUtil\HexUtil53
-    
-
-*  You can convert a hex value to a binary value
-*  You can convert a binary value to a hex value
-
-## 
-      Chippyash\Test\Crypt\Method\HexUtil\HexUtil54
-    
-
-*  You can convert a hex value to a binary value
-*  You can convert a binary value to a hex value
-
-## 
-      Chippyash\Test\Crypt\Method\HexUtil\HexUtil
-    
-
-*  You can convert binary value to a binary string
-
-## 
       Chippyash\Test\Crypt\Method\Rijndael256
     
 

@@ -19,8 +19,7 @@ script:
   - vendor/phpunit/phpunit/phpunit --configuration phpunit.travis.xml --coverage-clover build/logs/clover.xml
 
 after_success:
-    - php vendor/bin/coveralls -v
-    - CODECLIMATE_REPO_TOKEN=5150b7bd6c0820bf9eb1af0b144e4e79ad5befe989449ada362935b72961c3c7 ./vendor/bin/test-reporter
+  - ./vendor/bin/test-reporter
 
 # configure notifications (email, IRC, campfire etc)
 notifications:

@@ -5,7 +5,7 @@
 Certified for PHP 5.3+
 
 [![Build Status](https://travis-ci.org/chippyash/Crypt.svg?branch=master)](https://travis-ci.org/chippyash/Crypt)
-[![Coverage Status](https://coveralls.io/repos/chippyash/Crypt/badge.svg?branch=master&service=github)](https://coveralls.io/github/chippyash/Crypt?branch=master)
+[![Test Coverage](https://codeclimate.com/github/chippyash/Crypt/badges/coverage.svg)](https://codeclimate.com/github/chippyash/Crypt/coverage)
 [![Code Climate](https://codeclimate.com/github/chippyash/Crypt/badges/gpa.svg)](https://codeclimate.com/github/chippyash/Crypt)
 
 The above badges represent the current development branch.  As a rule, I don't push
@@ -195,3 +195,5 @@ do let me know.
 ## History
 
 V1.0.0 Initial Release
+
+V1.1.0 Update dependencies
