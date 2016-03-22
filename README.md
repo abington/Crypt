@@ -104,6 +104,8 @@ always the latest dev-master. The features it describes may not be in a released
 [Test Contract](https://github.com/chippyash/Crypt/blob/master/docs/Test-Contract.md) in the docs directory.
 For Symfony users, you'll also find an example DIC definition in the docs directory
 
+Check out [ZF4 Packages](http://zf4.biz/packages?utm_source=github&utm_medium=web&utm_campaign=blinks&utm_content=crypt) for more packages
+
 ### UML
 
 ![class diagram](https://github.com/chippyash/Crypt/blob/master/docs/crypt-classes.png)
@@ -197,3 +199,5 @@ do let me know.
 V1.0.0 Initial Release
 
 V1.1.0 Update dependencies
+
+V1.1.1 Add link to packages
