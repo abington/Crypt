@@ -2,8 +2,11 @@
 
 ## Quality Assurance
 
-Certified for PHP 5.3+
-
+![PHP 5.3](https://img.shields.io/badge/PHP-5.3-blue.svg)
+![PHP 5.4](https://img.shields.io/badge/PHP-5.4-blue.svg)
+![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
+![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
+![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
 [![Build Status](https://travis-ci.org/chippyash/Crypt.svg?branch=master)](https://travis-ci.org/chippyash/Crypt)
 [![Test Coverage](https://codeclimate.com/github/chippyash/Crypt/badges/coverage.svg)](https://codeclimate.com/github/chippyash/Crypt/coverage)
 [![Code Climate](https://codeclimate.com/github/chippyash/Crypt/badges/gpa.svg)](https://codeclimate.com/github/chippyash/Crypt)
@@ -24,8 +27,8 @@ Provides a simple encryption capability
 
 ## Why?
 
-Encryption is not generally straight forward.  This library tries to ease the pain.
-At the present time, a single verified encryption method is provided, others will follow.
+Encryption is not generally straightforward.  This library tries to ease the pain.
+At the present time, a single verified encryption method is provided.
 
 As the majority of web encryption requires that you are able to store the value in
 cookies, database tables etc, by default the encrypted value is encoded using Base 64.
@@ -78,7 +81,12 @@ $crypt->setUseMacAddress(new BoolType(false));
  
 ### Development only
 
-i.e. only on master branch at present
+__This library is no longer maintained and serves only as an example of encryption and
+as a holder for the work of others before me__ 
+
+If you have a wish to pick this up and take it further, please contact me.
+
+only on master branch at present
 
 As an example of how you can wrap other libraries into this, I've supplied the Blowfish
 method, which requires the Zend Crypt library.  
@@ -96,10 +104,6 @@ dependencies to use the Zend stuff. If you like it then add `"zendframework/zend
 to your project composer 'requires' statement;
 
 ## Further documentation
-
-Please note that what you are seeing of this documentation displayed on Github is
-always the latest dev-master. The features it describes may not be in a released version
- yet. Please check the documentation of the version you Compose in, or download.
 
 [Test Contract](https://github.com/chippyash/Crypt/blob/master/docs/Test-Contract.md) in the docs directory.
 For Symfony users, you'll also find an example DIC definition in the docs directory
@@ -201,3 +205,5 @@ V1.0.0 Initial Release
 V1.1.0 Update dependencies
 
 V1.1.1 Add link to packages
+
+Abandoned.
